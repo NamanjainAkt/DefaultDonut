@@ -49,7 +49,7 @@ const players = [
   },
   {
     name: 'Yogendra K. Narmada',
-    img: 'Yogendra_Kumar_Narmada',
+    img: assets.Yogendra_Narmada,
     score: 7.25,
     rank: 7,
   },
@@ -71,21 +71,21 @@ const players = [
 
 const Card = ({ name, img, score, rank }) => {
   return (
-    <div className="w-full max-w-[300px] sm:w-[280px] h-auto bg-radial-[at_25%_25%] from-white to-zinc-900 to-65% rounded-2xl shadow-lg p-4 flex flex-col items-center text-white m-2">
+    <div className="w-full max-w-[330px] sm:w-[280px] h-[430px] bg-radial-[at_25%_25%] from-white to-zinc-900 to-65% rounded-2xl shadow-lg p-4 flex flex-col items-center text-white m-2">
       <div className="w-full flex justify-center">
         <img
           src={img}
           alt={name}
-          className="w-full h-40 sm:h-48 object-cover rounded-2xl"
+          className="w-full h-60 sm:h-48 object-cover rounded-2xl"
         />
       </div>
 
       <div className="mt-3 sm:mt-4 text-center">
-        <h2 className="text-base sm:text-xl font-semibold mt-2 sm:mt-4">{name}</h2>
-        <p className="text-xs text-gray-300 mt-1 sm:mt-2 font-bold">#{rank}</p>
+        <h2 className="text-2xl sm:text-xl font-semibold mt-2 sm:mt-4">{name}</h2>
+        <p className="text-lg text-gray-300 mt-1 sm:mt-2 font-bold">#{rank}</p>
       </div>
 
-      <div className="mt-3 sm:mt-auto w-full bg-black rounded-xl p-2 sm:p-4 flex justify-between items-center">
+      <div className="mt-10 sm:mt-auto w-full bg-black rounded-xl p-2 sm:p-4 flex justify-between items-center">
         <p className="text-gray-400 text-xs sm:text-base">Score</p>
         <p className="text-sm sm:text-lg font-bold text-white">{score}</p>
       </div>
@@ -101,8 +101,8 @@ const DefaultDonut = () => {
       case 'Landing':
         return (
           <>
-            <h2 className="text-4xl sm:text-[100px] font-bold -mb-8 sm:-mb-22 text-center" style={{ fontFamily: 'var(--font-poppins)' }}>Make one</h2>
-            <div className="h-[250px] sm:h-[420px] w-full max-w-xs sm:max-w-lg">
+            <h2 className="text-7xl sm:text-[100px] font-bold -mb-8 sm:-mb-22 text-center" style={{ fontFamily: 'var(--font-poppins)' }}>Make one</h2>
+            <div className="h-[440px] sm:h-[420px] w-full max-w-xs sm:max-w-lg">
               <Canvas camera={{ position: [-2, 4, 0], fov: 100 }}>
                 <ambientLight intensity={0.8} />
                 <directionalLight position={[5, 5, 5]} intensity={1.5} />
@@ -112,8 +112,8 @@ const DefaultDonut = () => {
                 </Suspense>
               </Canvas>
             </div>
-            <p className="text-4xl sm:text-[80px] italic font-[Playfair] text-center">for the ages</p>
-            <p className='text-lg sm:text-2xl -mb-2 text-center'>3D Challenge</p>
+            <p className="text-7xl sm:text-[80px] italic font-semibold font-[Playfair] text-center">for the ages</p>
+            <p className='text-2xl sm:text-2xl mt-4 italic font-bold text-center'>"3D Challenge"</p>
           </>
         );
       case 'Gallery':
@@ -134,10 +134,10 @@ const DefaultDonut = () => {
       case 'About':
         return (
           <div 
-            className="w-full flex flex-col items-center justify-center text-center min-h-screen bg-no-repeat bg-center bg-cover overflow-y-auto no-scrollbar p-4 pt-6"
+            className="w-full flex flex-col items-center justify-center text-center min-h-screen bg-no-repeat bg-center bg-cover overflow-y-auto no-scrollbar px-4"
             style={{ backgroundImage: "url('/about_bg.png')" }} 
           >
-            <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-xl max-w-md sm:max-w-2xl p-4 sm:p-8">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-xl max-w-md sm:max-w-2xl p-4 sm:p-8 mb-36">
               <h2 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>About Default Donut</h2>
               <p className="text-sm sm:text-lg mb-3 text-gray-800" style={{ fontFamily: 'var(--font-poppins)' }}>
               The Graphix3D Club of BIT Durg presents “Default Donut: A Three-Donut Model Competition”, a fun and creative 3D modeling event inspired by Blender’s classic donut tutorial.
@@ -162,24 +162,24 @@ const DefaultDonut = () => {
   return (
     <div className="min-h-screen bg-white overflow-y-auto no-scrollbar">
       <nav className="p-4 flex flex-col sm:flex-row items-center justify-between sm:relative z-10">
-        <h1 className="text-lg sm:text-2xl font-semibold mb-3 sm:mb-0" style={{ fontFamily: 'var(--font-poppins)' }}>Default Donut</h1>
-        <div className="flex gap-3 sm:gap-8 bg-gray-200 py-2 px-3 sm:px-6 rounded-full sm:absolute sm:top-4 sm:left-1/2 sm:-translate-x-1/2">
+        <h1 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-0" style={{ fontFamily: 'var(--font-poppins)' }}>Default Donut</h1>
+        <div className="flex gap-6 sm:gap-8 bg-gray-200 py-3 px-4 sm:px-6 rounded-full sm:absolute sm:top-4 sm:left-1/2 sm:-translate-x-1/2">
           <button 
-            className={`text-xs sm:text-base ${activeTab === 'Landing' ? "font-medium" : "text-gray-700"}`} 
+            className={`text-base sm:text-lg ${activeTab === 'Landing' ? "font-semibold" : "text-gray-700"}`} 
             style={{ fontFamily: 'var(--font-poppins)' }} 
             onClick={() => setActiveTab('Landing')}
           >
             Landing
           </button>
           <button 
-            className={`text-xs sm:text-base ${activeTab === 'Gallery' ? "font-medium" : "text-gray-700"}`} 
+            className={`text-base sm:text-lg ${activeTab === 'Gallery' ? "font-semibold" : "text-gray-700"}`} 
             style={{ fontFamily: 'var(--font-poppins)' }} 
             onClick={() => setActiveTab('Gallery')}
           >
             Gallery
           </button>
           <button 
-            className={`text-xs sm:text-base ${activeTab === 'About' ? "font-medium" : "text-gray-700"}`} 
+            className={`text-base sm:text-lg ${activeTab === 'About' ? "font-semibold" : "text-gray-700"}`} 
             style={{ fontFamily: 'var(--font-poppins)' }} 
             onClick={() => setActiveTab('About')}
           >

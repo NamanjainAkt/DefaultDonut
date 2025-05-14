@@ -6,6 +6,7 @@ import Piyush_Sharma from './Piyush_Sharma.png';
 import Uday_Pratap_Sahu from './Uday_Pratap_Sahu.png';
 import Vaibhav_Thakur from './Vaibhav_Thakur.png';
 import Warisha_Fatima from './Warisha_Fatima.png';
+import Yogendra_Narmada from './Yogendra_Narmada.png';
 
 export const assets = {
     Abhinav_Gupta,
@@ -15,5 +16,6 @@ export const assets = {
     Piyush_Sharma,
     Uday_Pratap_Sahu,
     Vaibhav_Thakur,
-    Warisha_Fatima
+    Warisha_Fatima,
+    Yogendra_Narmada
 }
