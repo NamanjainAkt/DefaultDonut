@@ -101,7 +101,7 @@ const DefaultDonut = () => {
       case 'Landing':
         return (
           <>
-            <h2 className="text-4xl sm:text-[80px] font-bold -mb-8 sm:-mb-22 text-center" style={{ fontFamily: 'var(--font-poppins)' }}>Make one</h2>
+            <h2 className="text-4xl sm:text-[100px] font-bold -mb-8 sm:-mb-22 text-center" style={{ fontFamily: 'var(--font-poppins)' }}>Make one</h2>
             <div className="h-[250px] sm:h-[420px] w-full max-w-xs sm:max-w-lg">
               <Canvas camera={{ position: [-2, 4, 0], fov: 100 }}>
                 <ambientLight intensity={0.8} />

@@ -1,4 +1,4 @@
-import Abhinav_Gupta from './Abhinav_gupta.png';
+import Abhinav_Gupta from './Abhinav_Gupta.png';
 import Deepak_Vishwakarma from './Deepak_Vishwakarma.png';
 import Khushi_Kosriya from './Khushi_Kosriya.png';
 import  Ketan_Kumar_Sahu from './Ketan_Kumar_Sahu.png';
